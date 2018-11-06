@@ -1,0 +1,149 @@
+#body {
+    background-size: cover;
+    font-family: Arial;
+    color: black;
+	margin: 0px;
+	padding:0px;
+	width: 100%; 
+    height: 100%;
+    background-image:url('/assets/books.jpg');
+}
+
+
+.footer-section {
+    padding: 10px 0px;
+    background: black;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    bottom: 0px;
+    box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.36);
+}
+
+.container {
+    width: 1170px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container .row {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+}
+
+.foot-com {
+    float: left;
+    padding: 0px 20px;
+}
+
+.foot-1 a {
+    background-color: #3e3e4b;
+    padding: 7px 25px;
+    color: black;
+    font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 2px;
+    font-size: 14px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+
+
+
+.nav-item{
+    background-color: #3e3e4b;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 50%;
+}
+
+.nav-item > a{
+    color: #c0c0c1;
+}
+
+.container-fluid {
+   /* background-color: rgb(72, 77, 80);*/
+    background-position: center;
+    width: 100%;
+    height: 900px;
+}
+    
+.form-container {
+    border: 0px solid #fff;
+    padding: 30px 40px;
+    margin-top: 5px;
+    box-shadow: 1px 4px 26px 15px rgba(0,0,0,0.75);
+    color: #c0c0c1;
+    background-color: #3e3e4b;
+    opacity: 0.9;
+}
+    
+.form-group2 {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+    
+.btn-block {
+    background-color: black;
+    color: white;
+}
+
+#LoginBtn {
+    margin-top: 40px;
+}
+    
+#AnmeldenLabel {
+    color: black;
+    text-align: center;
+    width: 100%;
+    font: bold;
+    font-size: 20;
+    text-decoration: underline overline;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+  
+/*Passwortüberprüfung*/
+#strength {
+    margin-top: 10px;
+}
+
+/*Anmeldung*/
+#confirm {
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 30%;
+    height: 30px;
+    opacity: 0.7;
+    margin-top: 20px;
+    margin: auto;   
+}
+
+.confirmLogin{
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    opacity: 0.7;
+    margin-top: 20px;
+    margin: auto;   
+    font-size: 14;
+}
+    
+.hideConfirmation{
+    cursor: pointer;
+}
+
+#marginform {
+    margin-bottom: 20px;
+}

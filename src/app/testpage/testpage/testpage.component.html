@@ -1,0 +1,275 @@
+<div class="menu-section">
+  <div class="container">
+      <div class="row">
+        <div class="top-bar">
+          <ul>
+            <li>
+               <a class="btn btn-dark" routerLink="/home">home</a>
+            </li>
+            <li><a class="btn btn-dark" routerLink="/Impressum">impressum</a></li>
+            <li><a class="btn btn-dark" routerLink="/AboutUs">über uns</a></li>
+          </ul>
+        </div>
+      </div>
+
+        <div class="row">
+            <div class="logo">
+              <p> KNOX</p>
+            </div>
+
+              <div class="menu-bar">
+                <ul>
+                  <li>
+                      <a class="btn btn-dark" routerLink="/MyProfile">
+                        <img id="AccountImg" alt="account" src="assets/account.png"/>
+                        Mein Profil
+                      </a>
+                      <a class="btn btn-dark" routerLink="/Login">Abmelden</a>    
+                  </li>
+                </ul>
+              </div>
+        </div>
+    </div> <!-- end container -->
+  </div> <!--end menu-section-->
+
+    <div id="body">
+        <div id="top" class ="container-fluid">
+          <div class ="row">
+  <!-- sidebar -->
+            <div class = "col-2">
+                <div id="sidebar">
+                    <ul> 
+                      <li><a routerLink="/home" (click)="clicked(0)">Home</a></li>  
+                      <li><a routerLink="/home" (click)="clicked(1)">Technik</a></li>
+                      <li><a routerLink="/home" (click)="clicked(2)">Wirtschaft</a></li>
+                      <li><a routerLink="/home" (click)="clicked(3)">Recht</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+  <!-- mittlerer Teil -->
+
+  <div *ngIf="welcomepage" class = "col">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="panel panel-middle">
+            <div class="panel-heading"> <b> 
+                <img id="buildingImg" alt="building" src="assets/building.png"/>
+                 Willkommen auf KNOX!</b> </div>
+              <div class="panel-body">
+
+                  <b> Was ist KNOX?</b> <br><br>             
+                  hier kannst du dich austauschen - mit Studenten und Dozenten <br>
+                  quizze machen <br>
+                  zeugs hochladen <br>
+                  lernen <br>
+                  fragen stellen <br>
+                  <br>
+
+                <b>Anleitung</b> <br><br>
+                Bitte wähle einen Studiengang aus 
+                <br>
+                viel spaß, bei fragen und problemen kontaktiere uns
+              </div> 
+          </div> 
+        </div> 
+      </div> 
+    </div> 
+
+
+
+            <div *ngIf="menubarSelection" class = "col">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="panel panel-middle">
+                    <div class="panel-heading"> <b> 
+                        <img id="buildingImg" alt="building" src="assets/building.png"/>
+                        <!-- https://material.io/tools/icons/?icon=account_circle&style=baseline -->
+                         {{menubarSelectionTitle}}</b> </div>
+                      <div class="panel-body">
+                        <ul class="timeline">
+                          
+                          <li>
+                            <div class="timeline-panel">
+                              <div class="timeline-heading">
+                                <a routerLink="/home">
+                                  <h4 class="timeline-title">Skripte/Dokumente</h4>
+                                </a>
+                              </div>
+                              <div class="timeline-body">
+                                <p> Hier findest Du alle tollen Skripte und Dokumente.</p>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li class="timeline-inverted">
+                              <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                  <a routerLink="/home">
+                                  <h4 class="timeline-title">Präsentationen</h4>
+                                  </a>
+                                </div>
+                                <div class="timeline-body">
+                                  <p> Hier findest du Präsentationen.</p>
+                                  <p> zb. über Wirtschaftsinformatik oder so</p>
+                                </div>
+                              </div>
+                          </li>
+
+                            <li>
+                                <div class="timeline-panel">
+                                  <div class="timeline-heading">
+                                    <a routerLink="/home">
+                                      <h4 class="timeline-title">Quiz</h4>
+                                    </a>
+                                  </div>
+                                  <div class="timeline-body">
+                                    <p> Quizze und Rätsel und Spiele...</p>
+                                  </div>
+                                </div>
+                            </li>
+
+                            <li class="timeline-inverted">
+                                <div class="timeline-panel">
+                                  <div class="timeline-heading">
+                                    <a routerLink="/home">
+                                      <h4 class="timeline-title">Klausurfragen</h4>
+                                    </a>
+                                  </div>
+                                  <div class="timeline-body">
+                                    <p> Was sollten wir nochmal für die Klausur lernen?</p>
+                                  </div>
+                                </div>
+                            </li>
+
+                              <li>
+                                  <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                      <a routerLink="/home">
+                                        <h4 class="timeline-title">Forum</h4>
+                                      </a>
+                                    </div>
+                                    <div class="timeline-body">
+                                      <p> Hier sind alle Fragen und Antworten rund ums Thema Wirtschaftsinformatik</p>
+                                    </div>
+                                  </div>
+                              </li>
+
+                              <li class="timeline-inverted">
+                                  <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                      <a routerLink="/home">
+                                        <h4 class="timeline-title">Bücher</h4>
+                                      </a>
+                                    </div>
+                                    <div class="timeline-body">
+                                      <p> Claudias tolles Einführungsbuch und andere Dinge die man empfehlen könnte...</p>
+                                      <p> Liest heutzutage noch jemand Bücher?</p>
+                                    </div>
+                                  </div>
+                              </li>
+                        </ul>
+                      </div> <!-- end panel-body -->
+                  </div> <!-- end panel-middle -->
+                </div> <!-- end col-lg-12 -->
+              </div> <!--end row-->
+            </div> <!-- end col -->
+
+<!-- chat-seite-->
+              <div class = "col-3"> 
+                <div class="chatHeight">
+                   <div class="chat-panel panel panel-default">
+                      <div class="panel-heading"> Chat </div>
+                        <div class="panel-body">
+                          <ul class="chat">
+                      
+                            <li class="left clearfix">
+                              <span class="chat-img pull left">
+                                  <img class="img-circle" src="http://placehold.it/50/55C1E7/fff" alt="User Avatar">
+                              </span> 
+
+                                <div class="chat-body clearfix">
+                                  <div class="header">
+                                    <strong class="primary-font"> John Doe</strong>
+                                    <small class="pull-right text-muted">
+                                        <p>{{today | date:'shortTime'}} - {{today | date}}</p>
+                                    </small>
+                                  </div>
+                                  <p> Ich brauche Hilfe bei dem Thema XY.</p>
+                                </div>
+                            </li>
+
+                            <li class="left clearfix">
+                                <span class="chat-img pull left">
+                                  <img class="img-circle" src="http://placehold.it/50/FA6F57/fff" alt="User Avatar">
+                                </span>
+              
+                                <div class="chat-body clearfix">
+                                  <div class="header">
+                                    <strong class="primary-font"> Harley</strong>
+                                    <small class="pull-right text-muted">
+                                      13mins ago
+                                    </small>
+                                  </div>
+                                  <p> Ich kann dir helfen schau dir mal XYZ an</p>
+                                </div>
+                              </li>
+
+                       <li class="left clearfix">
+                            <span class="chat-img pull left">
+                              <img class="img-circle" src="http://placehold.it/50/FA6F57/fff" alt="User Avatar">
+                            </span>
+          
+                            <div class="chat-body clearfix">
+                              <div class="header">
+                                <strong class="primary-font"> unknown</strong>
+                                <small class="pull-right text-muted">
+                                    {{today | date:'shortTime'}} - {{today | date}}
+                                </small>
+                              </div>
+                              <p> {{chattext}}</p>
+                            </div>
+                          </li> 
+
+                      </ul>
+                  </div> <!-- end panel-body -->
+                
+                  <div class="panel-footer">
+                    <div class="input-group">
+                      <input #textbox type="text" [(ngModel)]="textValue" required id="btn-input" class="form-control input-sm" placeholder="Schreibe hier Deine Nachricht..." type="text">
+                      <span class="input-group-btn">
+                        <button id="btn-chat" class="btn btn-info" (click)="chatText(textbox.value)">senden</button>
+                      </span> 
+                    </div>
+                  </div>
+              </div> <!-- end panel-default -->
+            </div> <!-- end chat-height -->
+          </div> <!-- end col-3 -->
+      </div> <!-- end row -->
+  </div> <!-- end container-fluid-->
+
+
+
+    <div class="footer-section">
+      <div class="container">
+        <div class="row">
+          <div class="foot-com foot-1">
+            <a routerLink="/Impressum">Impressum und Kontakt</a>
+            <a routerLink="/AboutUs">Über uns</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+</div> <!-- end body-->
+
+
+
+
+
+
+
+
+
+

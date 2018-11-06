@@ -1,0 +1,112 @@
+<div id="body">
+  
+  <div class ="container-fluid">
+    <div class ="row">
+      <div class = "col-md-4 col-sn-4 col-xs-12"></div>
+      <div class = "col-md-4 col-sn-4 col-xs-12">
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+          <ngb-tabset>
+            <ngb-tab title="Anmelden">
+              <ng-template ngbTabContent>
+
+                <form #LoginForm="ngForm" id="Login" class="form-container"> 
+      
+                   <div class="form-group2" [class.has-error]="EmailControl.invalid && EmailControl.touched"> 
+                      <label for="InputEmail" >Email-Adresse:</label>                                                                                                                                            
+                        <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="E-Mail eintragen" name="email" required [(ngModel)]="InputEmail" #EmailControl="ngModel" [pattern]="emailpattern">
+                          <span class="help-block" *ngIf="EmailControl.invalid && EmailControl.touched"> &#187;&#187; Email erforderlich! &#171;&#171;</span>
+                   </div> 
+              
+                    <div class="form-group2" [class.has-error]="PasswordControl.invalid && PasswordControl.touched">
+                      <label for="InputPassword">Passwort:</label>
+                       <input type="password" class="form-control" id="InputPassword" placeholder="Passwort eintragen" name="password" required [(ngModel)]="InputPassword" #PasswordControl="ngModel">
+                          <span class="help-block" *ngIf="PasswordControl.invalid && PasswordControl.touched"> &#187;&#187; Passwort erforderlich! &#171;&#171;</span>
+                    </div>
+
+                    <a routerLink="/home" id="LoginBtn" class="btn btn-default btn-block">login</a>
+                      <button (click)="compareData()"id="LoginBtn" type="submit" class="btn btn-default btn-block" [disabled]="LoginForm.invalid">anmelden</button>
+                
+                  </form>
+
+              </ng-template>
+            </ngb-tab>
+
+            <!-- second tab -->
+            <ngb-tab>
+              <ng-template ngbTabTitle> Regristrieren</ng-template>
+              <ng-template ngbTabContent>
+
+                  <form id="marginform" #AnmeldenForm="ngForm" class="form-container" (ngSubmit)="addNewRegisterData(AnmeldenForm.value)">
+                     
+                      <div class="form-group2" [class.has-error]="NameControl.invalid && NameControl.touched">
+                        <label for="InputName">Name:</label>
+                          <input type="name" class="form-control" id="InputName" placeholder="Name eintragen" name="name" required ngModel #NameControl="ngModel"> 
+                           <span class="help-block" *ngIf="NameControl.invalid && NameControl.touched"> &#187;&#187; Name erforderlich! &#171;&#171; </span>
+                      </div>
+              
+                      <div class="form-group2" [class.has-error]="RegEmailControl.invalid && RegEmailControl.touched">
+                        <label for="InputEmail">Email-Adresse:</label>
+                          <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="E-Mail eintragen" name="RegisterEmail" required ngModel #RegEmailControl="ngModel" [pattern]="emailpattern">
+                            <span class="help-block" *ngIf="RegEmailControl.invalid && RegEmailControl.touched"> &#187;&#187; Email erforderlich! &#171;&#171; </span>
+                      </div>
+              
+                      <div class="form-group2" [class.has-error]="RegPasswordControl.invalid && RegPasswordControl.touched">
+                        <label for="InputPassword">Passwort:</label>
+                          <input type="password" class="form-control" id="InputRegPassword" placeholder="Passwort eintragen" name="InputRegPassword" required [(ngModel)]="InputRegPassword" #RegPasswordControl="ngModel">
+                            <span class="help-block" *ngIf="RegPasswordControl.invalid && RegPasswordControl.touched"> &#187;&#187; Passwort erforderlich! &#171;&#171; </span>
+                      
+                          <!-- Checkbox -->
+                          <div class="form-check">
+                            <input type="checkbox" name="checkbox" class="form-check-input" id="exampleCheck1" (click)="sendValuesCheckBox()" [disabled]="RegPasswordControl.invalid" [(ngModel)]="checkbox">
+                              <label class="form-check-label" for="exampleCheck1">Check Passwort</label>
+                          </div>
+                            
+                          <label *ngIf="strengthIsAdded" id="strength">{{strength}}
+                              <ngb-progressbar *ngIf="progressbarRed" type="danger" [value]="100" [striped]="true" [animated]="true"></ngb-progressbar>
+                              <ngb-progressbar *ngIf="progressbarYellow" type="warning" [value]="100" [striped]="true" [animated]="true"></ngb-progressbar>
+                              <ngb-progressbar *ngIf="progressbarGreen" type="success" [value]="100" [striped]="true" [animated]="true"></ngb-progressbar>
+                          </label> 
+                      </div> <!-- Password/checkbox end -->
+                      
+                      <button id="registerbtn" (click)="register()" type="submit" class="btn btn-default btn-block" [disabled]="AnmeldenForm.invalid">regristrieren</button>
+                    </form>
+
+
+                    <div id="confirm" *ngIf = "isAdded"> 
+                        <label class="hideConfirmation"> {{confirmationString}}</label>
+                    </div>
+
+              </ng-template>
+            </ngb-tab>
+          </ngb-tabset>
+
+      </div>
+    </div>
+ </div>
+     
+ 
+
+<div class="footer-section">
+  <div class="container">
+    <div class="row">
+      <div class="foot-com foot-1">
+        <a routerLink="/Impressum">Impressum</a>
+        <a routerLink="/AboutUs">Über uns</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
