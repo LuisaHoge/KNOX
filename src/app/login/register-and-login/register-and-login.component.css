@@ -9,16 +9,16 @@
     background-image:url('/assets/books.jpg');
 }
 
-
 .footer-section {
     padding: 10px 0px;
-    background: black;
+    background: #1c1d22;
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.8);
     position: fixed;
     width: 100%;
     z-index: 999;
     bottom: 0px;
     box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.36);
+    opacity: 0.9;
 }
 
 .container {
@@ -40,16 +40,16 @@
 }
 
 .foot-1 a {
-    background-color: #3e3e4b;
-    padding: 7px 25px;
-    color: black;
-    font-weight: 600;
-    font-family: 'Quicksand', sans-serif;
-    border-radius: 2px;
-    font-size: 14px;
-    text-decoration: none;
     margin-right: 10px;
+    color: #888;
+    font-size: 13px;
+    border-right: 1px solid #474747;
+    padding: 0px 10px;
+    text-transform: initial;
+    font-family: 'Quicksand', sans-serif;
+    background-color: transparent;
 }
+
 
 
 

@@ -40,7 +40,15 @@ export class TestpageComponent implements OnInit {
     }
   }
   
-  ngOnInit() {
+  
+  hideChatwindow: boolean = true;
+
+  hideChat(){
+    if(this.hideChatwindow = true){
+      this.hideChatwindow = false;
+    }
   }
 
+  ngOnInit() {
+  }
 }

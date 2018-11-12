@@ -1,8 +1,6 @@
 # TestPro
 
 
-bllbalbalabla
-
 npm install bootstrap
 
 

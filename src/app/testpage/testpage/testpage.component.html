@@ -24,7 +24,9 @@
                         <img id="AccountImg" alt="account" src="assets/account.png"/>
                         Mein Profil
                       </a>
-                      <a class="btn btn-dark" routerLink="/Login">Abmelden</a>    
+                      <a class="btn btn-dark" routerLink="/Login">
+                        <img id="AccountImg" alt="account" src="assets/power.png"/>
+                        Abmelden</a>    
                   </li>
                 </ul>
               </div>
@@ -39,7 +41,9 @@
             <div class = "col-2">
                 <div id="sidebar">
                     <ul> 
-                      <li><a routerLink="/home" (click)="clicked(0)">Home</a></li>  
+                      <li><a routerLink="/home" (click)="clicked(0)">
+                        <img id="AccountImg" alt="account" src="assets/home.png"/>
+                        Home</a></li>  
                       <li><a routerLink="/home" (click)="clicked(1)">Technik</a></li>
                       <li><a routerLink="/home" (click)="clicked(2)">Wirtschaft</a></li>
                       <li><a routerLink="/home" (click)="clicked(3)">Recht</a></li>
@@ -146,7 +150,9 @@
                                   <div class="timeline-panel">
                                     <div class="timeline-heading">
                                       <a routerLink="/home">
-                                        <h4 class="timeline-title">Forum</h4>
+                                        <h4 class="timeline-title">
+                                            <img id="buildingImg" alt="forum" src="assets/forum.png"/>   Forum                              
+                                        </h4>
                                       </a>
                                     </div>
                                     <div class="timeline-body">
@@ -179,8 +185,10 @@
               <div class = "col-3"> 
                 <div class="chatHeight">
                    <div class="chat-panel panel panel-default">
-                      <div class="panel-heading"> Chat </div>
-                        <div class="panel-body">
+                      <div class="panel-heading"> Chat 
+                          <img (click)="hideChat()" style="float: right;" class="hoverImg" alt="building" src="assets/chat.png"/>          
+                      </div>
+                        <div *ngIf="hideChatwindow" class="panel-body">
                           <ul class="chat">
                       
                             <li class="left clearfix">
@@ -234,11 +242,12 @@
                       </ul>
                   </div> <!-- end panel-body -->
                 
-                  <div class="panel-footer">
+                  <div *ngIf="hideChatwindow" class="panel-footer">
                     <div class="input-group">
                       <input #textbox type="text" [(ngModel)]="textValue" required id="btn-input" class="form-control input-sm" placeholder="Schreibe hier Deine Nachricht..." type="text">
                       <span class="input-group-btn">
-                        <button id="btn-chat" class="btn btn-info" (click)="chatText(textbox.value)">senden</button>
+                       <!-- <button id="btn-chat" class="btn btn-info" (click)="chatText(textbox.value)">senden</button> -->
+                        <img (click)="chatText(textbox.value)" style="float: right; margin-left: 10px; margin-top: 5px;" class="hoverImg" alt="building" src="assets/send.png"/>          
                       </span> 
                     </div>
                   </div>
